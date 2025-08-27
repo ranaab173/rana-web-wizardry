@@ -57,10 +57,10 @@ const TestimonialsSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (carouselRef.current) {
+      if (carouselRef.current && carouselRef.current.scrollNext) {
         carouselRef.current.scrollNext();
       }
-    }, 3000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
@@ -75,10 +75,10 @@ const TestimonialsSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-scale-in animate-delay-100">
             Client <span className="text-primary">Testimonials</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-in-right animate-delay-300">
             What clients say about working with me
           </p>
         </div>
@@ -97,7 +97,7 @@ const TestimonialsSection = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className={`h-full bg-gradient-card border-0 shadow-neon hover:shadow-neon-purple hover:-translate-y-2 transition-all duration-500 animate-fade-in-up animate-delay-${(index + 1) * 100}`}>
+                  <Card className={`h-full bg-gradient-card border-0 shadow-neon hover:shadow-neon-purple hover:-translate-y-2 transition-all duration-500 animate-zoom-in animate-delay-${(index + 1) * 150}`}>
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center mb-4">
                         <img 

@@ -9,15 +9,15 @@ const ContactSection = () => {
     <section className="py-20 px-6 warm-gradient section-animate">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4 animate-fade-in-up animate-delay-200">
             Let's Work Together
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-scale-in animate-delay-400">
             Ready to start your next project? Get in touch and let's discuss how I can help bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 animate-slide-in-left animate-delay-600">
           {/* Contact Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-4">

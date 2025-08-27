@@ -45,10 +45,10 @@ const ServicesSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-scale-in animate-delay-200">
             Services I <span className="text-primary">Offer</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-in-left animate-delay-400">
             Comprehensive web development services to bring your digital vision to life
           </p>
         </div>

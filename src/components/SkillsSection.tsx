@@ -31,10 +31,10 @@ const SkillsSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-300">
             Technical <span className="text-primary">Expertise</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-zoom-in animate-delay-500">
             Comprehensive skillset covering modern web development and eCommerce technologies
           </p>
         </div>

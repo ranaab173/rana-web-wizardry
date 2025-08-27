@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
+import freshbiteEcommerce from "@/assets/freshbite-ecommerce.jpg";
 
 const portfolioProjects = [
   {
@@ -39,7 +40,7 @@ const portfolioProjects = [
     title: "FreshBite E-commerce",
     category: "E-commerce",
     description: "Food delivery e-commerce platform with cart functionality, menu browsing, and order management.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+    image: freshbiteEcommerce,
     technologies: ["HTML5", "CSS3", "JavaScript", "E-commerce"],
     liveUrl: "https://ranaab173.github.io/freshbite-ecommerce/",
     githubUrl: "https://github.com/ranaab173/freshbite-ecommerce"
@@ -85,10 +86,10 @@ const PortfolioSection = () => {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-100">
             Featured <span className="text-primary">Portfolio</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-300">
             Showcase of my best work across different technologies and platforms
           </p>
         </div>
