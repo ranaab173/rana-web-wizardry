@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { useEffect, useRef } from "react";
 import { Star } from "lucide-react";
+import sarahJohnson from "@/assets/sarah-johnson.jpg";
 
 const testimonials = [
   {
@@ -9,7 +10,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Marketing Director",
     company: "TechCorp Solutions",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face",
+    image: sarahJohnson,
     rating: 5,
     text: "Rana delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and technical expertise are outstanding."
   },
@@ -59,13 +60,13 @@ const TestimonialsSection = () => {
       if (carouselRef.current) {
         carouselRef.current.scrollNext();
       }
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-background relative overflow-hidden">
+    <section className="py-20 px-6 bg-background relative overflow-hidden section-animate">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="moving-blob" style={{ top: '30%', left: '80%', animationDelay: '-2s' }}></div>
@@ -83,11 +84,13 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="animate-fade-in-up animate-delay-400">
-          <Carousel 
+            <Carousel 
             ref={carouselRef}
             opts={{
               align: "start",
               loop: true,
+              skipSnaps: false,
+              startIndex: 0,
             }}
             className="w-full max-w-5xl mx-auto"
           >

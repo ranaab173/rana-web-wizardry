@@ -14,11 +14,11 @@ const HeroSection = () => {
       <div className="moving-blob" style={{ top: '80%', left: '80%' }}></div>
 
       {/* Profile Avatar */}
-      <div className="profile-avatar animate-scale-in">
+      <div className="fixed top-4 right-6 z-50 animate-scale-in">
         <img 
           src={profileAvatar} 
           alt="Rana Abubakar - Web Developer" 
-          className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-lg"
+          className="w-28 h-28 rounded-full object-cover object-center border-4 border-white shadow-lg"
         />
       </div>
       
@@ -48,9 +48,9 @@ const HeroSection = () => {
       
       {/* Contact Email Sidebar */}
       <div className="contact-email hidden lg:block">
-        <a href="mailto:rana@example.com" 
+        <a href="mailto:ranairc@gmail.com" 
            className="text-sm text-gray-custom hover:text-foreground transition-smooth whitespace-nowrap">
-          rana@example.com
+          ranairc@gmail.com
         </a>
       </div>
       

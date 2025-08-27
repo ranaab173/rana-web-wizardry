@@ -24,9 +24,23 @@ const Index = () => {
         const rate = scrolled * -0.5;
         (element as HTMLElement).style.transform = `translateY(${rate}px)`;
       });
+
+      // Section entrance animations
+      const sections = document.querySelectorAll('.section-animate');
+      sections.forEach((section) => {
+        const elementTop = section.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          section.classList.add('animate');
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Trigger on load
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
