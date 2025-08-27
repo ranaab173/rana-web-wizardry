@@ -52,6 +52,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'warm': {
+					DEFAULT: 'hsl(var(--warm-accent))',
+					bg: 'hsl(var(--warm-bg))'
+				},
+				'tech': {
+					bg: 'hsl(var(--tech-bg))'
+				},
+				'skill': {
+					hover: 'hsl(var(--skill-hover))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
