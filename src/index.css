@@ -89,6 +89,7 @@
 
     --card: 222 47% 8%;
     --card-foreground: 210 40% 98%;
+    --header-footer-bg: 210 16% 13%;
 
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
@@ -179,6 +180,39 @@
   .transition-smooth {
     transition: var(--transition-smooth);
   }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-card {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-neon {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.4), 0 0 40px rgba(var(--primary), 0.2), 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(var(--primary), 0.3), 0 5px 15px -5px rgba(var(--primary), 0.2);
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.2), 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-neon-purple {
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.4), 0 0 40px rgba(147, 51, 234, 0.2), 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  .shadow-button {
+    box-shadow: 0 4px 15px rgba(var(--primary), 0.3), 0 2px 8px rgba(var(--primary), 0.2);
+  }
+
+  .shadow-button-hover {
+    box-shadow: 0 8px 25px rgba(var(--primary), 0.4), 0 4px 12px rgba(var(--primary), 0.3);
+  }
   
   /* Social icons positioning */
   .social-sidebar {
@@ -195,6 +229,7 @@
     top: 60px;
     left: 60px;
     z-index: 30;
+    margin: 1rem;
   }
   
   /* Yellow blob positioning */
@@ -314,6 +349,31 @@
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-neon {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(var(--primary), 0.4), 0 0 40px rgba(var(--primary), 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(var(--primary), 0.6), 0 0 60px rgba(var(--primary), 0.3);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -376,6 +436,10 @@
 .animate-card-hover {
   animation: cardHover 0.3s ease-out forwards;
 }
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-neon { animation: pulse-neon 2s ease-in-out infinite; }
+.animate-zoom-in { animation: zoom-in 0.6s ease-out forwards; }
 
 /* Parallax Effect */
 .parallax {

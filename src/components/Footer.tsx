@@ -7,7 +7,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-background via-tech-bg to-portfolio-bg pt-20 pb-8 px-6 overflow-hidden">
+    <footer className="relative bg-header-footer-bg pt-20 pb-8 px-6 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="moving-blob" style={{ top: '10%', left: '20%', animationDelay: '-4s' }}></div>
@@ -66,7 +66,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <p className="text-muted-foreground text-lg">rana@example.com</p>
+                  <p className="text-muted-foreground text-lg">ranairc@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -88,7 +88,7 @@ const Footer = () => {
               {[
                 { icon: <Github className="w-5 h-5" />, href: "https://github.com", label: "GitHub" },
                 { icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: <Mail className="w-5 h-5" />, href: "mailto:rana@example.com", label: "Email" }
+                { icon: <Mail className="w-5 h-5" />, href: "mailto:ranairc@gmail.com", label: "Email" }
               ].map((social, index) => (
                 <a
                   key={index}

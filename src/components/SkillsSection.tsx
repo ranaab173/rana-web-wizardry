@@ -43,7 +43,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className={`group bg-gradient-card border-0 shadow-card hover:shadow-neon transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up animate-delay-${(index + 1) * 200}`}
+              className={`group bg-gradient-card border-0 shadow-neon hover:shadow-neon-purple hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-fade-in-up animate-delay-${(index + 1) * 200}`}
             >
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">

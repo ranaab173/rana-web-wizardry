@@ -18,7 +18,7 @@ const HeroSection = () => {
         <img 
           src={profileAvatar} 
           alt="Rana Abubakar - Web Developer" 
-          className="w-20 h-20 rounded-full object-cover object-center border-4 border-white shadow-lg"
+          className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-lg"
         />
       </div>
       

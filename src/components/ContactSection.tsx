@@ -26,7 +26,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-medium text-foreground">Email</p>
-                <p className="text-muted-foreground">rana@example.com</p>
+                <p className="text-muted-foreground">ranairc@gmail.com</p>
               </div>
             </div>
             

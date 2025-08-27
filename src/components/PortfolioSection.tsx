@@ -6,67 +6,67 @@ import { useState } from "react";
 const portfolioProjects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Shopify",
-    description: "Modern Shopify store with custom theme development, advanced product filtering, and integrated payment solutions.",
-    image: "/api/placeholder/400/300",
-    technologies: ["Shopify", "Liquid", "JavaScript", "CSS3"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Hadia Perfumes",
+    category: "E-commerce",
+    description: "Elegant perfume e-commerce website with modern design, product showcase, and responsive layout.",
+    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    liveUrl: "https://ranaab173.github.io/hadia-perfumes/",
+    githubUrl: "https://github.com/ranaab173/hadia-perfumes"
   },
   {
     id: 2,
-    title: "React Dashboard",
-    category: "React",
-    description: "Comprehensive admin dashboard with real-time analytics, data visualization, and responsive design.",
-    image: "/api/placeholder/400/300",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Creative Portfolio",
+    category: "Portfolio",
+    description: "Modern creative portfolio website showcasing professional work with stunning visual effects and animations.",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Animations"],
+    liveUrl: "https://ranaab173.github.io/creative-portfolio-website/",
+    githubUrl: "https://github.com/ranaab173/creative-portfolio-website"
   },
   {
     id: 3,
-    title: "WordPress CMS",
-    category: "WordPress",
-    description: "Custom WordPress theme with Elementor integration, advanced custom fields, and SEO optimization.",
-    image: "/api/placeholder/400/300",
-    technologies: ["WordPress", "PHP", "Elementor", "ACF"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Nexus Digital",
+    category: "Business",
+    description: "Professional digital agency website with modern design, service showcase, and client testimonials.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    liveUrl: "https://ranaab173.github.io/nexus-digital-website/",
+    githubUrl: "https://github.com/ranaab173/nexus-digital-website"
   },
   {
     id: 4,
-    title: "Restaurant Website",
-    category: "Web Development",
-    description: "Modern restaurant website with online ordering system, menu management, and table reservations.",
-    image: "/api/placeholder/400/300",
-    technologies: ["HTML5", "CSS3", "JavaScript", "PHP"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "FreshBite E-commerce",
+    category: "E-commerce",
+    description: "Food delivery e-commerce platform with cart functionality, menu browsing, and order management.",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "JavaScript", "E-commerce"],
+    liveUrl: "https://ranaab173.github.io/freshbite-ecommerce/",
+    githubUrl: "https://github.com/ranaab173/freshbite-ecommerce"
   },
   {
     id: 5,
-    title: "Portfolio Website",
-    category: "React",
-    description: "Creative portfolio website with smooth animations, dark mode toggle, and contact form integration.",
-    image: "/api/placeholder/400/300",
-    technologies: ["React", "TypeScript", "Framer Motion", "EmailJS"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Yoga Instructor",
+    category: "Health & Fitness",
+    description: "Beautiful yoga instructor website with class schedules, instructor profiles, and booking system.",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Wellness"],
+    liveUrl: "https://ranaab173.github.io/yoga-instructor-web/",
+    githubUrl: "https://github.com/ranaab173/yoga-instructor-web"
   },
   {
     id: 6,
-    title: "WooCommerce Store",
-    category: "WordPress",
-    description: "Complete WooCommerce solution with custom checkout, inventory management, and payment gateway integration.",
-    image: "/api/placeholder/400/300",
-    technologies: ["WooCommerce", "WordPress", "PHP", "MySQL"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Modern CV Template",
+    category: "Template",
+    description: "Professional CV template with modern design, downloadable format, and customizable sections.",
+    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop",
+    technologies: ["HTML5", "CSS3", "Template Design", "PDF"],
+    liveUrl: "https://ranaab173.github.io/modern-cv-template/",
+    githubUrl: "https://github.com/ranaab173/modern-cv-template"
   }
 ];
 
-const categories = ["All", "Shopify", "React", "WordPress", "Web Development"];
+const categories = ["All", "E-commerce", "Portfolio", "Business", "Health & Fitness", "Template"];
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -116,19 +116,29 @@ const PortfolioSection = () => {
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.id} 
-              className={`group bg-card-bg border-0 shadow-card hover:shadow-neon transition-all duration-500 overflow-hidden animate-fade-in-up animate-delay-${(index + 1) * 100}`}
+              className={`group bg-card-bg border-0 shadow-neon hover:shadow-neon-blue hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-fade-in-up animate-delay-${(index + 1) * 100}`}
             >
               <div className="relative overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-primary/60 text-6xl font-bold">
-                    {project.title.charAt(0)}
-                  </div>
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <Button size="sm" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-white border-white hover:bg-white hover:text-black shadow-button"
+                    onClick={() => window.open(project.liveUrl, '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4" />
                   </Button>
-                  <Button size="sm" variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="text-white border-white hover:bg-white hover:text-black shadow-button"
+                    onClick={() => window.open(project.githubUrl, '_blank')}
+                  >
                     <Github className="w-4 h-4" />
                   </Button>
                 </div>

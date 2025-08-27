@@ -57,7 +57,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`group bg-gradient-card border-0 shadow-card hover:shadow-neon transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up animate-delay-${(index + 1) * 100}`}
+              className={`group p-8 bg-gradient-card border-0 shadow-neon hover:shadow-neon-blue hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-fade-in-up animate-delay-${(index + 1) * 150}`}
             >
               <CardHeader className="text-center pb-4">
                 <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 w-fit shadow-lg">
