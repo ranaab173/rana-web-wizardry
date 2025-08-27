@@ -36,13 +36,19 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 bg-card-bg relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="moving-blob" style={{ top: '30%', left: '5%', animationDelay: '-2s' }}></div>
+        <div className="moving-blob" style={{ bottom: '20%', right: '10%', animationDelay: '-6s' }}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Services I Offer
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in-up">
+            Services I <span className="text-primary">Offer</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
             Comprehensive web development services to bring your digital vision to life
           </p>
         </div>
@@ -51,18 +57,18 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group card-gradient border-0 shadow-card hover:shadow-glow transition-smooth cursor-pointer"
+              className={`group bg-gradient-card border-0 shadow-card hover:shadow-neon transition-all duration-500 cursor-pointer transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up animate-delay-${(index + 1) * 100}`}
             >
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-smooth w-fit">
+                <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 w-fit shadow-lg">
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl text-foreground">
+                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
                   {service.description}
                 </p>
               </CardContent>
