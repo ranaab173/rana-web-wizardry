@@ -44,31 +44,31 @@ const ServicesSection = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in-up animate-delay-100">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-scale-in animate-delay-200">
             Services I <span className="text-primary">Offer</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-in-left animate-delay-400">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-slide-in-left animate-delay-300">
             Comprehensive web development services to bring your digital vision to life
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-in-right animate-delay-400">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`group p-8 bg-gradient-card border-0 shadow-neon hover:shadow-neon-blue hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-fade-in-up animate-delay-${(index + 1) * 150}`}
+              className={`group p-8 bg-gradient-card border-0 shadow-neon hover:shadow-neon-blue hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-scale-in animate-delay-${500 + (index * 100)}`}
             >
               <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 w-fit shadow-lg">
+                <div className={`mx-auto mb-4 p-4 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-300 w-fit shadow-lg animate-zoom-in animate-delay-${600 + (index * 100)}`}>
                   {service.icon}
                 </div>
-                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                <CardTitle className={`text-xl text-foreground group-hover:text-primary transition-colors animate-fade-in-up animate-delay-${700 + (index * 100)}`}>
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
+                <p className={`text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors animate-slide-in-left animate-delay-${800 + (index * 100)}`}>
                   {service.description}
                 </p>
               </CardContent>

@@ -320,6 +320,46 @@
   }
 }
 
+/* Dark Floating Objects */
+.dark-floating-object {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: hsl(210 16% 13% / 0.8);
+  border-radius: 50%;
+  animation: floatDark 8s infinite ease-in-out;
+  z-index: 5;
+}
+
+.dark-floating-object:nth-child(6) {
+  width: 40px;
+  height: 40px;
+  animation-delay: -2s;
+  animation-duration: 10s;
+}
+
+.dark-floating-object:nth-child(7) {
+  width: 80px;
+  height: 80px;
+  animation-delay: -5s;
+  animation-duration: 12s;
+}
+
+@keyframes floatDark {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(30px, -40px) rotate(90deg);
+  }
+  50% {
+    transform: translate(-20px, 30px) rotate(180deg);
+  }
+  75% {
+    transform: translate(-40px, -20px) rotate(270deg);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

@@ -85,11 +85,11 @@ const PortfolioSection = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-100">
+        <div className="text-center mb-16 animate-fade-in-up animate-delay-100">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-200">
             Featured <span className="text-primary">Portfolio</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animate-delay-300">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-zoom-in animate-delay-300">
             Showcase of my best work across different technologies and platforms
           </p>
         </div>

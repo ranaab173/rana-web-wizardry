@@ -12,13 +12,18 @@ const HeroSection = () => {
       <div className="moving-blob" style={{ top: '10%', left: '70%' }}></div>
       <div className="moving-blob" style={{ top: '60%', left: '10%' }}></div>
       <div className="moving-blob" style={{ top: '80%', left: '80%' }}></div>
+      
+      {/* Dark Floating Objects */}
+      <div className="dark-floating-object" style={{ top: '20%', right: '15%' }}></div>
+      <div className="dark-floating-object" style={{ top: '70%', right: '25%' }}></div>
+      <div className="dark-floating-object" style={{ bottom: '15%', left: '20%' }}></div>
 
       {/* Profile Avatar */}
-      <div className="fixed top-4 left-6 z-50 animate-scale-in">
+      <div className="fixed top-4 left-6 md:left-6 left-1/2 md:transform-none transform -translate-x-1/2 z-50 animate-scale-in">
         <img 
           src={profileAvatar} 
           alt="Rana Abubakar - Web Developer" 
-          className="w-28 h-28 rounded-full object-cover object-center border-4 border-white shadow-lg"
+          className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-center border-4 border-white shadow-lg"
         />
       </div>
       

@@ -30,23 +30,23 @@ const SkillsSection = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-300">
+        <div className="text-center mb-16 animate-fade-in-up animate-delay-100">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-slide-in-right animate-delay-200">
             Technical <span className="text-primary">Expertise</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-zoom-in animate-delay-500">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-zoom-in animate-delay-300">
             Comprehensive skillset covering modern web development and eCommerce technologies
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 animate-slide-in-left animate-delay-400">
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className={`group bg-gradient-card border-0 shadow-neon hover:shadow-neon-purple hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-fade-in-up animate-delay-${(index + 1) * 200}`}
+              className={`group bg-gradient-card border-0 shadow-neon hover:shadow-neon-purple hover:-translate-y-3 hover:scale-105 transition-all duration-500 animate-scale-in animate-delay-${500 + (index * 150)}`}
             >
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h3 className={`text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors animate-fade-in-up animate-delay-${600 + (index * 150)}`}>
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -54,7 +54,7 @@ const SkillsSection = () => {
                     <Badge 
                       key={skillIndex} 
                       variant="secondary" 
-                      className="bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 cursor-default"
+                      className={`bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 cursor-default animate-zoom-in animate-delay-${700 + (index * 150) + (skillIndex * 50)}`}
                     >
                       {skill}
                     </Badge>
