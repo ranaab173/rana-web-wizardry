@@ -8,45 +8,46 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="max-w-6xl mx-auto px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-2xl font-bold">
-            <span className="text-foreground">Rana</span>
-            <span className="text-primary">.</span>
-          </div>
+          {/* Logo - Empty for minimal design like reference */}
+          <div></div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#home" className="text-foreground hover:text-red-accent transition-smooth font-medium">
               Home
             </a>
-            <a href="#skills" className="text-foreground hover:text-primary transition-smooth">
-              Skills
+            <a href="#about" className="text-foreground hover:text-red-accent transition-smooth font-medium">
+              About
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-smooth">
-              Services
-            </a>
-            <a href="#portfolio" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#portfolio" className="text-foreground hover:text-red-accent transition-smooth font-medium">
               Portfolio
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
+            <a href="#services" className="text-foreground hover:text-red-accent transition-smooth font-medium">
+              Services
+            </a>
+            <a href="#contact" className="text-foreground hover:text-red-accent transition-smooth font-medium">
               Contact
             </a>
           </nav>
 
-          {/* CTA Button */}
+          {/* CV Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Hire Me
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="border-red-accent text-red-accent hover:bg-red-accent hover:text-white transition-smooth"
+            >
+              Curriculum Vitae | CV
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-smooth"
+            className="md:hidden p-2 text-foreground hover:text-red-accent transition-smooth"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -54,25 +55,29 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 border-t border-border/50">
+          <nav className="md:hidden mt-4 py-4 border-t border-border/20">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-foreground hover:text-primary transition-smooth" onClick={toggleMenu}>
+              <a href="#home" className="text-foreground hover:text-red-accent transition-smooth font-medium" onClick={toggleMenu}>
                 Home
               </a>
-              <a href="#skills" className="text-foreground hover:text-primary transition-smooth" onClick={toggleMenu}>
-                Skills
+              <a href="#about" className="text-foreground hover:text-red-accent transition-smooth font-medium" onClick={toggleMenu}>
+                About
               </a>
-              <a href="#services" className="text-foreground hover:text-primary transition-smooth" onClick={toggleMenu}>
-                Services
-              </a>
-              <a href="#portfolio" className="text-foreground hover:text-primary transition-smooth" onClick={toggleMenu}>
+              <a href="#portfolio" className="text-foreground hover:text-red-accent transition-smooth font-medium" onClick={toggleMenu}>
                 Portfolio
               </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-smooth" onClick={toggleMenu}>
+              <a href="#services" className="text-foreground hover:text-red-accent transition-smooth font-medium" onClick={toggleMenu}>
+                Services
+              </a>
+              <a href="#contact" className="text-foreground hover:text-red-accent transition-smooth font-medium" onClick={toggleMenu}>
                 Contact
               </a>
-              <Button variant="hero" size="sm" className="w-fit">
-                Hire Me
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-fit border-red-accent text-red-accent hover:bg-red-accent hover:text-white transition-smooth"
+              >
+                CV
               </Button>
             </div>
           </nav>
